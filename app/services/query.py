@@ -25,7 +25,7 @@ def get_related():
         # Build up a cleaner output
         clean_json = {}
         for index, item in enumerate(response_json['related']):
-            clean_json[str(index)] = {
+            clean_json[index] = {
                 "concept": item['@id'].split('/')[-1],
                 "weight": item['weight']
             }
@@ -68,7 +68,7 @@ def is_a():
         for index, edge in enumerate(response_json["edges"]):
             edge_subject = edge['start']['label']
             edge_pred_nom = edge['end']['label']
-            clean_json[str(index)] = {
+            clean_json[index] = {
                 'sentence': f"[{edge_subject}] is a kind of [{edge_pred_nom}]",
                 'subject': edge_subject,
                 'pred_nom': edge_pred_nom,
