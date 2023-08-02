@@ -1,0 +1,12 @@
+services:
+  conceptnet_ms:
+    build: .
+    command: python -m microservice
+    volumes:
+      - ./app:/app/microservice
+    ports:
+      - 5000:5000
+    environment:
+      - PYTHONPATH=/app/microservice
+      - CONCEPTNET_API_URL=https://api.conceptnet.io/
+      - CONCEPTNET_LANG_FILTER=/c/en
