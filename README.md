@@ -38,7 +38,7 @@ curl -X GET "http://127.0.0.1:5000/getrelated?term=swimming"
 
 ### Query 'Is A' Relationships
 
-`/IsA?subject=<SUBJECT>&prednom=<PREDICATE NOMITAVE>`: Provides a list of concepts with the relation 'Is A' (<SUBJECT> is a <PREDICATE NOMITAVE>)
+`/IsA?subject=<SUBJECT>&prednom=<PREDICATE NOMITAVE>`: Provides a list of concepts with the relation 'Is A' (\<SUBJECT\> is a \<PREDICATE NOMITAVE\>). \
 Both the `?subject` and `?prednom` are optional, however **atleast one** is required.
 
 #### Examples
